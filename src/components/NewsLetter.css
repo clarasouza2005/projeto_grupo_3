@@ -1,0 +1,93 @@
+:root {
+    --primary-text-color:#FAF9F6;
+    --secondary-text-color:#424242;
+    --primary-bg-color:rgb(34, 38, 42);
+    --secondary-bg-color:#FAF9F6;
+    --primary-highlight-color:#FFC463;
+    --secondary-highlight-color:#3498DB;
+}
+
+.NewsLetter {
+    height: fit-content;
+    width: 50vw;
+    padding:0.5rem;
+    margin-bottom:5rem;
+    background: var(--primary-bg-color);
+    border:8px solid var(--secondary-bg-color);
+    border-radius:25px; 
+    display: flex;
+}
+@media screen and (max-width:800px) {
+    .NewsLetter {
+        width:90%;
+        height: fit-content;
+    }
+}
+form {
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   grid-template-rows: 1fr 1fr ;
+   grid-gap:1rem;
+    /* background-color:grey; */
+    margin:auto;
+    grid-template-areas:
+    'B B B'
+    'A A C'
+    ;
+}
+@media screen and (max-width:1300px) {
+    form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        'B B B '
+        'A A A '
+        'C C C';
+    }
+   
+
+    
+}
+.NewsLetter form :nth-child(2) /*input email*/ {
+    grid-area: A ;
+    place-self: center;
+    width:20rem;
+    height: 2rem;
+    outline:none;
+    border:none;
+    border-radius: 10px;
+    padding: 0.2rem 1rem;
+    color:var(--secondary-text-color);
+    font-family:'MusticaProSemiBold';
+    font-size: 1rem;
+}
+
+.NewsLetter form :nth-child(3) /*label btn*/{
+    grid-area:B;
+    place-self: center;
+    font-size:1rem;
+    font-family:'MusticaProSemiBold';
+    color:var(--primary-text-color);
+    text-align: center;
+}
+.NewsLetter form :nth-child(4)/*btn*/{
+    grid-area:C;
+    place-self: center;
+    background: var(--primary-highlight-color);
+    border:none;
+    outline:none;
+    border-radius: 10px;
+    padding:0.2rem 1rem;
+    width: 100%;
+    height: 100%;
+    color:var(--secondary-text-color);
+    font-family:'MusticaProSemiBold';
+    font-size: 1rem;
+}
+.NewsLetter form :nth-child(4):hover/*btn*/{
+    background: #dd9e39;
+    color:w;
+    /* mix-blend-mode: difference; */
+    cursor: pointer;
+    transition: 0.5s ease-out;
+}

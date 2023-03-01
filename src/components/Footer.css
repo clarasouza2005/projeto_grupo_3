@@ -1,0 +1,120 @@
+.footer{
+    width: 100%;
+    height: 305px;
+    border-top: 1px solid rgb(179, 179, 179);
+    background-color: rgb(34, 38, 42);
+    display: flex;
+    flex-direction: row;
+    padding-top: 2.5rem;
+    justify-content: space-around;
+}
+
+.empresaFooter{
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.logoRodaPe{
+    margin-right: 20px;
+}
+
+.endereco{
+    color: white;
+    display: flex;
+}
+
+.gps{
+    margin-right: 1rem;
+    align-self: center;
+}
+
+.email{
+    display: flex;
+    color: white;
+    margin-top: 15px;
+}
+
+.envelope{
+    margin-right: 1rem;
+}
+
+.socialMedia{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialIcon{
+    margin-left: 1.5rem;
+}
+
+.bloco2{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 1.3rem;
+    align-items: center;
+}
+
+.bloco2 span{
+    color: white;
+    text-decoration: none;
+}
+
+.bloco3{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 1.3rem;
+    align-items: center;
+}
+
+.span{
+    color: white;
+    font-size: 1rem;
+}
+
+.spanT{
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.spanVT{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.linkBloco{
+    text-decoration: none;
+}
+
+@media (max-width: 1000px){
+    .bloco2{
+        width: 200px;
+    }
+
+    .bloco3{
+        width: 200px;
+    }
+}
+
+@media (max-width: 730px){
+    .footer{
+        flex-direction: column;
+        height: auto;
+    }
+    .bloco1{
+        align-self: center;
+    }
+    .bloco2{
+        align-self: center;
+    }
+    .bloco3{
+        align-self: center;
+        margin-bottom: 38px;
+    }
+}
+

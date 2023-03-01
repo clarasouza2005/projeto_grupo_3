@@ -1,0 +1,77 @@
+.redes-sociais {
+    width:80vw;
+    height: 225px;
+    padding: 1.8rem;
+    border:2px solid var(--secondary-bg-color);
+    border-radius:6px;
+
+    font-family: 'Poppins';
+    background:var(--secondary-highlight-color) ;
+    color:var(--primary-bg-color);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    'A C'
+    'B C'
+    'D C'
+    ;
+    
+}
+.redes-sociais h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    grid-area: A;
+}
+.redes-sociais p {
+    font-size: 1rem;
+    font-weight: 400;
+    grid-area: B;
+}
+.redes-sociais .logos a img {
+    width:45px;
+    height: auto;
+    margin-top:1rem;
+    margin-right:0.5rem;
+}
+.containerLogo-redes-sociais {
+grid-area: C;
+height:8rem;
+place-self: center;
+}
+#CT-LOGO {
+    height: 100%;
+}
+.redes-sociais .logos {
+    grid-area: D;
+}
+.redes-sociais .logos a img:hover {
+    animation-name: link-rotation;
+    animation-duration: 2s;
+}
+@media screen and (max-width:1200px) {
+    .redes-sociais {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr;
+        grid-template-areas: 
+        'A A'
+        'B B'
+        'D C'
+        ;
+        height: fit-content;
+    }
+    .containerLogo-redes-sociais {
+        place-self:center;
+    }
+    
+}
+
+@keyframes link-rotation {
+    0% {
+
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,269 @@
+:root {
+  --primary-text-color: #faf9f6;
+  --secondary-text-color: #424242;
+  --primary-bg-color: rgb(34, 38, 42);
+  --primary-highlight-color: #ffc463;
+  --grey: #808080;
+  --card-shadow: #3f3f3f33;
+  --drop-shadow-3d: #251313;
+}
+
+@font-face {
+  font-family: BookmanOldStyle;
+  src: url(../fonts/BOOKOS.TTF);
+}
+@font-face {
+  font-family: MusticaProSemiBold;
+  src: url(../fonts/MusticaPro-SemiBold.otf);
+}
+@font-face {
+  font-family: Momento;
+  src: url(../fonts/Momento.ttf);
+}
+.planos {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 4rem 0;
+  background: var(--primary-bg-color);
+}
+.planos h1 {
+  color: var(--primary-text-color);
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Poppins";
+  font-weight: 700;
+}
+.plano-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 550px;
+  width: 300px;
+  border: 1.5px solid var(--primary-bg-color);
+  background: var(--primary-text-color);
+  border-radius: 12px;
+  box-shadow: 2px 4px 5px var(--card-shadow), -2px 4px 5px var(--card-shadow);
+}
+
+.plano-card:hover {
+  transform: scale(1.01, 1.01);
+  -webkit-transform: scale(1.01, 1.01);
+  backface-visibility: hidden;
+  will-change: transform;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.75) !important;
+}
+.plano-card:hover .btn-planos {
+  background: #fdb84a;
+  border: 1.5px solid var(--primary-bg-color);
+}
+
+.btn-planos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 3rem;
+  width: 15rem;
+  margin: 1rem auto;
+  padding: 5px 0.5rem;
+  background: var(--primary-highlight-color);
+  color: var(--secondary-text-color);
+
+  text-align: center;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  border-radius: 100px;
+  border: 1px solid var(--primary-bg-color);
+
+  transition: 0.3s;
+}
+.btn-planos:hover {
+  color: #161410;
+  background: #dd9e39 !important;
+}
+.wrapper-planos {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 6rem;
+  height: 100%;
+  width: 100vw;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+/* .service1 {
+  background: rgba(34, 192, 195, 0.253);
+  background: radial-gradient(
+    circle,
+    rgba(34, 192, 195, 0.24) 0%,
+    rgba(45, 48, 253, 0.26) 100%
+  );
+}
+.service2 {
+  background: rgb(34, 193, 195);
+  background: radial-gradient(
+    circle,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(224, 45, 253, 0.7693452380952381) 100%
+  );
+}
+.service3 {
+  background: rgb(34, 193, 195);
+  background: radial-gradient(
+    circle,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(117, 253, 45, 0.6180847338935574) 100%
+  );
+}
+.service {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0.1rem;
+  height: 200px;
+}
+.service1,
+.service2,
+.service3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  max-width: 14rem;
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px var(--drop-shadow-3d);
+
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1rem;
+} */
+.valor {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "A . . . "
+    "A B B B"
+    "C C C C ";
+  height: 10rem;
+  max-width: 100%;
+  padding: 0 1rem;
+  font-family: "Poppins";
+  font-weight: 700;
+}
+.fake {
+  grid-area: A;
+  color: #424242;
+  padding: 1rem;
+  text-decoration: line-through;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.valorVenda {
+  grid-area: B;
+  color: #ff0000;
+  padding: 1rem;
+  font-size: 3rem;
+}
+.valorVenda::before {
+  content: "R$";
+  font-size: 0.8rem;
+  position: relative;
+  top: -35px;
+  right: 3%;
+}
+.mensalidade {
+  font-size: 0.8rem;
+  position: relative;
+  top: 2px;
+  left: -2%;
+}
+.pegadinhaDoMalandro {
+  grid-area: C;
+  display: block;
+  color: rgb(139, 139, 139);
+  text-align: center;
+  font-size: 0.5rem;
+}
+
+.descr1 h2,
+.descr2 h2,
+.descr3 h2 {
+  color: var(--secondary-text-color);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.253);
+  font-family: "Poppins";
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+.descr1,
+.descr2,
+.descr3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+
+
+
+
+.descr1 h2,
+.descr2 h2,
+.descr3 h2 {
+  color: var(--secondary-text-color);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.253);
+  font-family: "Poppins";
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+.descr1,
+.descr2,
+.descr3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  margin-top:15px;
+}
+.descr1 {
+  background-image: url('../assets/undraw_energizer_re_vhjv.svg');  
+}
+.descr2 {
+  background-image: url('../assets/undraw_fitness_tracker_3033.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.descr3 {
+  background-image: url('../assets/undraw_personal_training_0dqn.svg');
+}
+.descr-title1,.descr-title2,.descr-title3 {
+  width: 100%;;
+  height: 35px;
+  background:linear-gradient(to top ,transparent -50%,#fff 150%);
+  opacity: 0.8;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 1px 2px grey;
+  transition: 0.6s;
+}

@@ -1,0 +1,63 @@
+:root {
+    --primary-bg-color:rgb(34, 38, 42);
+    --primary-text-color:#FAF9F6;
+}
+
+.loading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:6px;
+    height: 100px;
+    width: 150px;
+    /* background: rgb(124, 48, 224); */
+    border-radius: 16px;
+}
+
+.animation1 , .animation2 , .animation3 {
+    display: block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:1px solid var(--primary-bg-color);
+   
+}
+.animation1 {
+    background:var(--primary-text-color);
+    animation: 0.6s ease-in 0s anim1;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.animation2 {
+    /* background: linear-gradient(90deg,white 0 35%, var(--primary-bg-color) 55% 100%); */
+    background:var(--primary-text-color);
+    animation:0.6s ease-in 0.3s anim1;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.animation3 {
+    background: var(--primary-text-color);
+    animation:0.6s ease-in 0.6s anim1;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes anim1 {
+    0% {
+        transform: translateY( 0px);
+        /* filter: drop-shadow(0 -5px 3px rgb(66, 66, 66)); */
+        
+    }
+    80% {
+        filter: none;
+        border:1px solid var(--primary-bg-color);
+    }
+    100% {
+        transform: translateY(20px) ;
+        filter: drop-shadow(0 5px 3px rgb(73, 241, 177));
+        border:1px solid white;
+        
+    }
+}

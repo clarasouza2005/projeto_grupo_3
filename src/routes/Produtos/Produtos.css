@@ -1,0 +1,100 @@
+:root{
+    --primary-outline-color:#424242;
+    --primaru-product-color:#424242;
+    --price-color:#ff0000;
+}
+*,body,h1{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+button,img{
+    user-select: none;
+}
+button{
+    background: none;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+.comprar {
+    background:var(--primary-highlight-color);
+    padding:0.2rem 1rem;
+    border-radius: 15px;
+    /* border:1px solid var(--primary-outline-color) */
+    box-shadow: 0 1px 3px var(--primary-outline-color);
+}
+.carrinho {
+    height: 20px;
+    padding:0.1rem;
+    margin-top:0.1rem;
+}
+#cart{
+    display: block;
+    height:15px;
+    margin: auto;
+}
+.acumulador-de-items {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin:0 auto;
+    width: 60%;
+}
+.acumulador {
+    height: 15px;
+    padding:auto;
+}
+.container-produtos {
+    display: grid;
+    height: 100%;
+    width: 50vw;
+    margin: 0 auto;
+    font-family: 'Poppins';
+    color:var(--primary-product-color)
+}
+.wrapper-produto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-template-rows: repeat(2,1fr);
+    grid-gap:45px ;
+    margin:2rem 0 ;
+
+}
+.produto-card {
+    height: 315px;
+    width: 220px;
+    padding:0.3rem 0.5rem;
+    border-radius: 0;
+    border-bottom: 1px solid var(--primary-outline-color);
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.produto-img {
+    display: block;
+    margin: 0 auto;
+height: 150px;
+width: 150px;
+}
+.produto {
+    text-align: start;
+    font-size: 1.2rem;
+    margin-bottom:0.3rem;
+}
+.marca {
+    font-size: 0.9rem;
+    margin-bottom:0.3rem;
+    font-weight: 400;
+}
+.quantidade {
+    font-size: 0.7rem;
+    margin-bottom:0.3rem;
+    font-weight: 400;
+}
+.valor-produto {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom:0.3rem;
+    color:var(--price-color);
+}

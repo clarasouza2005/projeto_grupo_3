@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,300&family=Roboto:wght@400;700;900&family=Rubik:wght@600;700;800&family=Sofia+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+.cont{
+    display: flex;
+    display: row;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.photo{
+    background-image: url("../img/homeDesktop1.jpg");
+    background-size: cover;
+    height:620px;
+    width: 50%;
+}
+
+.landingText{
+    width:50%;
+    height: 620px;
+    background-color: black;
+    color: white;
+    padding-left: 1.72rem;
+    padding-right: 1.72rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.landingText h2{
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.h2Mobile{
+    display: none;
+}
+
+.sliderBody{
+    width: 110px;
+    height: 38px;
+    background-color: darkgray;
+    align-self: center;
+    margin-bottom: 1.4rem;
+    border-radius: 15px;
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: none;
+}
+
+.slider{
+    width: 45px;
+    height: 30px;
+    background-color: white;
+    align-self: center;
+    border-radius: 15px;
+    animation: slide 0.80s linear 1;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    0%{
+        background-color: white;
+    }
+    50%{
+        background-color: white;
+        width: 55px;
+    }
+    100%{
+        width: 45px;
+        transform: translateX(55px);
+        background-color: #f9b851;
+    }
+}
+
+.btn1{
+    align-self: center;
+    margin-top: 3rem;
+    transition: 0.25s;
+}
+
+.btn1 :hover{
+    background-color: white;
+    border-color: white;
+    cursor: pointer;
+    color: black;
+    letter-spacing: 0.018rem;
+    font-weight: 400;
+}
+
+.btn11{
+    
+    width: 85px;
+    height: 35px;
+    background-color: black;
+    border: 2px solid darkorchid;
+    border-radius: 17px;
+    transition: 0.25s;
+    color: white;
+}
+
+@media (max-width: 900px){
+    .photo{
+        background-image: url("../img/homeDesktop2.jpg");
+
+    }
+}
+
+@media (max-width: 773px){
+    .h2Desktop{
+        display: none;
+    }
+    .sliderBody{
+        display: block;
+        padding-top: 4px;
+    }
+}
+
+@media (max-width: 772px){
+    .h2Mobile{
+        display: flex;
+    }
+}
+
+@media (max-width: 650px){
+    .photo{
+        background-image: url("../img/mobileHome.jpg");
+    }
+
+    .landingText{
+        font-size: 1rem;
+    }
+
+    .landingText h2{
+        font-size: 2rem;    
+        margin-bottom: 1.5rem;
+    }
+
+    .btn1{
+        margin-top: 1.8rem;
+    }
+}
+
+@media (max-width: 502px){
+    .sliderBody{
+        display: block;
+    }
+    .btn1{
+        margin-top: 14px;
+    }
+    .h2Mobile{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .landingText span{
+        font-size: 0.87rem;
+    }
+}
